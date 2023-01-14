@@ -12,28 +12,6 @@ data.sort_values("Date", inplace=True)
 app = Dash(__name__)
 
 # Define layout of the app
-
-app.layout = html.Div(children=[
-    html.H1(children='Hello Dash'),
-
-    html.Div(children='''
-        Dash: A Web Application framework for Python.
-        '''),
-
-    dcc.Graph(
-        id='example-graph',
-        figure={
-            'data':[
-                {'x':[1,2,3],'y':[2,4,1],'type':'bar','name':'SF'}
-            ],
-            'layout': {
-                'title':'Dash Data Visualisation'
-            }
-        }
-    )
-])
-
-
 app.layout = html.Div(
     children=[
         html.H1(children="Avocado Analytics",),
